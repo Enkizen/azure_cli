@@ -1,0 +1,35 @@
+az account list --output table
+Instead of json string, list the azure subscription in table before making any setting changes.
+
+az group list --output table
+Return a list of resource groups in the subscription
+
+
+az resource list \
+    --resource-group learn-8d74d177-ed9e-4b3b-a1f4-71d750576057 \
+    --resource-type Microsoft.Web/sites
+
+we'll list all the resources in the learn-8d74d177-ed9e-4b3b-a1f4-71d750576057 
+using the az resource list command. The command will return a list of resources. 
+By specifying, --resource-type 
+we can filter the result to include only the resource information related to websites.
+
+ctrl-l clear screen.
+ctrl-u clear current command.
+
+az webapp stop \
+    --resource-group learn-8d74d177-ed9e-4b3b-a1f4-71d750576057 \
+    --name <web app name>
+
+az webapp stop command to stop the web application running in our app service. 
+Replace <web app name> with the name of your web app you copied, 
+then run this command to stop your web app.
+
+az webapp start \
+    --resource-group learn-8d74d177-ed9e-4b3b-a1f4-71d750576057 \
+    --name <web app name>
+
+start the web app by running the az webapp start command
+
+
+
